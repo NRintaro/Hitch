@@ -1,0 +1,47 @@
+/*メインパネル================= */
+#welcome {
+  padding: 100px 0 0 0;
+  text-align: center;
+  margin: 0 auto;
+  width: 900px;
+}
+
+#welcome h1 {
+  font-size: 60px;
+  color: #F8F8FF;
+}
+
+#main_panel {
+   padding: 46px 0 0 0;/*メインパネル上部に46ピクセルの余白を設定 */
+   height: 500px; /* メインパネルの高さを500pxに設定 */
+   background-image: image-url("Hubble.jpg"); /* 背景を中央寄せで繰り返しなしで設定 */
+   background-size: cover; /* 背景画像をフルスクリーンで表示 */
+ }
+
+#main_panelArea {
+   text-align: center;
+   margin: 0 auto; /* 横幅をautoにすることでコンテンツが中央寄りになります */
+   padding: 10px 0 0 0; /* メインパネルコンテンツ上部に200ピクセルの余白を設定 */
+   width: 900px; /* 横幅を900ピクセルで設定 */
+ }
+
+/* 失敗したやつ
+.top-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-wrapper img {
+  width: 45%;
+}
+
+.register-wrapper h1 {
+  font-size: 35px;
+}
+
+背景画像=====================
+.top {
+  background-image: image-url("Hubble.jpg");
+}
+*/

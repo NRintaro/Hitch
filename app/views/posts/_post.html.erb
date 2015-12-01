@@ -1,0 +1,17 @@
+<li>
+  <%= image_for(post.user) %>
+  <span class="user-name">
+    <%= post.user.name %>
+  </span>
+  <span class="content">
+    <%= link_to post.title, post_path(post.id) %>
+    <div>
+      <small>
+        <%= post.likes.count %>人がいいね!と言っています。
+      </small>
+    </div>
+  </span>
+  <span>
+    <%= post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+  </span>
+</li>

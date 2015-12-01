@@ -1,0 +1,3 @@
+<!--render()の引数でパーシャルを呼び出し、変数noteに@noteを渡してください-->
+$('#like-link').html('<%= escape_javascript(render("likes/like_links", post: @post )) %>');
+$('#like-count').html('<%= @post.likes.count %>');

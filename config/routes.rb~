@@ -1,0 +1,21 @@
+Rails.application.routes.draw do
+  
+  devise_for :users
+  resources :users, only: [:index, :show, :edit, :update] do
+    member do
+      get :like_posts
+    end
+  end
+
+  resources :posts, only: [:show, :create, :edit, :update, :destroy]
+
+  post 'like/:post_id' => 'likes#like', as:'like'
+  delete 'unlike/:post_id' => 'likes#unlike', as:'unlike'
+
+  get '/comments/new'
+  post '/comments' =>'comments#create'
+  delete '/comments/:id' =>'comments#destroy',as:'destroy_comment'
+
+   root 'home#top'
+   get '/about' =>'home#about'
+end

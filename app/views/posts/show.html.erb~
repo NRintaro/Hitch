@@ -1,0 +1,21 @@
+<p id="notice" class="alert alert-success">
+  <%= notice %>
+</p>
+
+<h2>タイトル</h2>
+<p><%= @post.title %></p>
+<h2>内容</h2>
+<p><%= @post.content %></p>
+<div id="like-link">
+  <%= render 'likes/like_links', post: @post %>
+</div>
+
+<div>
+  <small>
+    <%= link_to @post.likes.count, liking_users_post_path(@post.id), id: 'like-count' %>人がいいね！といっています
+  </small>
+</div>
+<% if current_user?(@post.user) %>
+  <%= link_to '編集', edit_post_path(@post.id), class:'btn edit-btn' %>
+  <%= link_to "削除", post_path(@post.id), method: "delete", class: "btn destroy-btn", "data-confirm" => "本当に削除しますか？" %>
+<% end %>
